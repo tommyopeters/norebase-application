@@ -1,0 +1,216 @@
+@import "variables";
+@import "base";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "main";
+@import "left-sidebar";
+@import "right-sidebar";
+
+.card {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.1);
+  background-color: white;
+
+  &.grey-card {
+    box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.05);
+    color: #404040;
+    background-color: #fafafa;
+  }
+
+  &-header,
+  &-body,
+  &-footer {
+    padding: 1.6rem;
+  }
+
+  &-banner {
+    .image-control {
+      height: 100%;
+    }
+  }
+  &-body {
+  }
+  &-footer {
+  }
+}
+.author {
+  display: flex;
+  align-items: center;
+
+  &-image {
+    border-radius: 100%;
+    overflow: hidden;
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-right: 8px;
+  }
+  &-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #3d3d3d;
+  }
+  .date {
+    font-size: 1.2rem;
+    color: #171717;
+  }
+}
+.post {
+  .card-body,
+  .card-footer {
+    margin-left: 4rem;
+  }
+  .card-body {
+    padding: 0 1.6rem;
+    h2 {
+      font-size: 2.4rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    ul.tags {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      margin-left: -6px;
+      li {
+        margin-right: 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 8px;
+        border: 1px solid transparent;
+
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+          border: 1px solid #562765;
+          background-color: rgba(86, 39, 101, 0.1);
+        }
+
+        &.yellow {
+          .hash {
+            color: #f7df1e;
+          }
+          &:hover {
+            border-color: #f7df1e;
+            background-color: rgba(247, 223, 30, 0.1);
+          }
+        }
+        &.blue {
+          .hash {
+            color: #3b49df;
+          }
+          &:hover {
+            border-color: #3b49df;
+            background-color: rgba(59, 73, 223, 0.1);
+          }
+        }
+        &.red {
+          .hash {
+            color: #f54d27;
+          }
+          &:hover {
+            border-color: #f54d27;
+            background-color: rgba(245, 77, 39, 0.1);
+          }
+        }
+        &.purple {
+          .hash {
+            color: #890606;
+          }
+          &:hover {
+            border-color: #890606;
+            background-color: rgba(137, 6, 6, 0.1);
+          }
+        }
+        &.green {
+          .hash {
+            color: #008335;
+          }
+          &:hover {
+            border-color: #008335;
+            background-color: rgba(0, 131, 53, 0.1);
+          }
+        }
+      }
+    }
+  }
+  .card-footer {
+    padding-bottom: 2rem;
+    margin-left: 3.5rem;
+    display: flex;
+    align-items: center;
+
+    .reactions,
+    .comments {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      padding: 4px 8px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.035);
+      }
+
+      svg {
+        transform: scale(1.2);
+        margin-right: 5px;
+        margin-bottom: -4px;
+      }
+    }
+    .end {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .btn {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+.sidebar-list {
+  cursor: pointer;
+  padding: 5px 16px 12px 16px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(59, 73, 223, 0.1);
+    color: rgb(47, 58, 178);
+    text-decoration: underline;
+  }
+
+  &.active {
+    background-color: rgba(59, 73, 223, 0.1);
+    color: rgb(47, 58, 178);
+    text-decoration: underline;
+  }
+
+  .icon {
+    margin-right: 1rem;
+    svg {
+      transform: scale(1.1) translateY(5px);
+    }
+  }
+}
+
+.mobile-display {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.mobile-hide {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

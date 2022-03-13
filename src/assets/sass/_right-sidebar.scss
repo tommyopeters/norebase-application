@@ -1,0 +1,88 @@
+aside.right-sidebar {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+  .card {
+    margin-bottom: 1.6rem;
+  }
+  .codeland {
+    h3 {
+      margin: 1rem 0;
+    }
+    a {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: rgb(59, 73, 223);
+    }
+  }
+  .list-cards {
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(36, 36, 36);
+      }
+
+      a {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgb(59, 73, 223);
+      }
+    }
+    .card-body {
+      border-top: 1px solid rgb(245, 245, 245);
+      padding: 0;
+      ul {
+        li {
+          cursor: pointer;
+          padding: 1.6rem;
+          border-bottom: 1px solid rgb(245, 245, 245);
+
+          &:hover {
+            background-color: rgb(255, 255, 255);
+
+            p.content {
+              color: rgb(47, 58, 178);
+            }
+          }
+          p.content {
+            font-size: 1.6rem;
+            color: rgb(64, 64, 64);
+          }
+          .tag,
+          .comments {
+            font-size: 1.4rem;
+            color: rgb(113, 113, 113);
+            margin-top: 1rem;
+          }
+          .new {
+            margin-top: 1rem;
+            width: max-content;
+            padding: 4px;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            color: rgb(120, 53, 15);
+            background-color: rgb(252, 211, 77);
+          }
+        }
+      }
+    }
+    .card-footer {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: rgb(64, 64, 64);
+
+      &:hover {
+        color: rgb(47, 58, 178);
+      }
+    }
+  }
+}

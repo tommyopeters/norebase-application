@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  box-sizing: border-box; // overflow: scroll;
+  background: rgb(245, 245, 245);
+  font-size: 1.4rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #000000;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100vh;
+}
+main {
+  min-height: calc(100vh - 20rem);
+  margin-top: 8rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.image-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   height: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &.vertical {
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}

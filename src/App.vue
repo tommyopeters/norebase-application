@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MobileMenu v-if="mobile" @mobile="mobile = false"></MobileMenu>
+    <Header @mobile="mobile = true"></Header>
+    <Main></Main>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/layout/Header.vue";
+import Footer from "./components/layout/Footer.vue";
+import Main from "./components/layout/Main.vue";
+import MobileMenu from "./components/layout/MobileMenu.vue";
+// import LeftSideBar from "./components/layout/LeftSideBar.vue";
+// import RightSideBar from "./components/layout/RightSideBar.vue";
+import "./assets/sass/main.scss";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Footer,
+    Main,
+    MobileMenu,
+    //  LeftSideBar,RightSideBar
+  },
+  data() {
+    return {
+      mobile: false,
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+//
+<style lang="scss">
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+//   margin-top: 60px;
+// }
+//
 </style>

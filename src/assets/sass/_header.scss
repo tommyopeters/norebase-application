@@ -1,0 +1,132 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  z-index: 50;
+
+  .container {
+    height: 4rem;
+    width: 100%;
+    max-width: var(--site-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1280px) {
+      padding: 0 2rem;
+    }
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+    .mobile-menu-trigger {
+      margin: 0 0.8rem;
+      cursor: pointer;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+
+      &:hover {
+        svg {
+          fill: #2f3ab2;
+        }
+      }
+      svg {
+        transform: scale(1.1);
+      }
+    }
+    .logo {
+      height: 4rem;
+    }
+    .search-box {
+      position: relative;
+
+      margin: 0 1.6rem;
+      height: 4rem;
+      border: 1px solid #d4d4d4;
+      border-radius: 5px;
+
+      input {
+        border: none;
+        outline: none;
+        width: 42rem;
+        height: 100%;
+        background-color: transparent;
+        padding: 8px;
+
+        font-size: 16px;
+      }
+      .search-btn {
+        cursor: pointer;
+
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: transparent;
+        width: 4rem;
+        transition: all 200ms ease-in-out;
+
+        svg {
+          transform: scale(3);
+        }
+
+        &:hover {
+          background-color: rgb(59, 73, 223, 0.1);
+          fill: #2f3ab2;
+        }
+      }
+    }
+    .buttons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+      }
+      .btn-blue {
+        margin-left: 1rem;
+
+        @media (max-width: 768px) {
+          margin-left: 0.5rem;
+        }
+      }
+
+      .search-btn {
+        cursor: pointer;
+
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: transparent;
+        width: 4rem;
+        transition: all 200ms ease-in-out;
+
+        svg {
+          transform: scale(3);
+        }
+
+        &:hover {
+          background-color: rgb(59, 73, 223, 0.1);
+          fill: #2f3ab2;
+        }
+      }
+    }
+  }
+}
